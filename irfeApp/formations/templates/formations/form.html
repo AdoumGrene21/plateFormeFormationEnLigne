@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} formulaire ajout formation page {% endblock %}
+{% block content %}
+
+<form action="add_formation" method="post">
+    {% csrf_token %}
+    <label for="libelle">formation</label>
+    <div>{{form.libelle}}</div>
+    <label for="libelle">description</label>
+    <div>{{form.description}}</div>
+    <div>
+        <button type="submit">ajouter</button>
+    </div>
+</form>  
+        
+{% endblock %}
